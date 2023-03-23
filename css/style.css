@@ -6,9 +6,23 @@
     padding: 0;
 }
 
+:root {
+    --dark-theme-color: #232323;
+    --light-theme-color: #eeeeee;
+    --font: 'Poppins', sans-serif;
+    --color-title: #404040;
+    --color-article: #808080;
+    --card-color: #d5d5d5;
+    --border-color: #ffffff;
+    --background-link: #fe0094;
+    --color-link: #ffffff;
+    --background-hover: #cd0178;
+    --background-focus: #fe0094;
+}
+
 html {
     height: 100%;
-    background: #262626;
+    background: var(--dark-theme-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,10 +30,10 @@ html {
 
 .card {
     width: 300px;
-    height: 460px;
-    background-color: #d5d5d5;
+    height:460px;
+    background: var(--card-color);
     border-radius: 8px;
-    border: 2px solid rgba(255, 255, 255, 1);
+    border: 2px solid var(--border-color);
     box-shadow: 12px 12px 12px -10px rgba(22,22,22,1);
 }
 
@@ -27,49 +41,49 @@ html {
     width: 100%;
     height: 160px;
     border-radius: 4px 4px 0 0;
-    background-image: url(/img/technology.jpg);
+    background-image: url("/img/technology.jpg");
     background-size: cover;
     background-position: center;
 }
 
 .content {
-    width: 100%;
     padding: 20px 20px 0 20px;
 }
 
 .title {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font);
     font-weight: 600;
-    font-size: 18px;
-    color: #404040;
+    font-size: 1.12rem;
+    color: var(--color-title);    
     margin-bottom: 10px;
 }
 
 .info {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
+    color: var(--color-article);
     margin-bottom: 28px;
 }
 
 .content a {
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font);
     font-weight: 600;
-    font-size: 16px;
-    color: white;
-    background: rgb(254, 0, 148);
+    font-size: 1rem;
+    color: var(--color-link);
+    background: var(--background-link);
     border-radius: 6px;
-    border: 1px solid rgba(255, 255, 255, 0);
+    border: 1.5px solid transparent;
     padding: 10px 30px;
 }
 
 .content a:hover {
-    background: rgb(205, 1, 120);
+    background: #cd0178;
 }
 
 .content a:focus {
-    background: rgb(254, 0, 148);
-    border: 1px solid rgba(255, 255, 255, 1);
+    background: var(--background-focus);
+    border: 1px solid var(--border-color);
     box-shadow: 0px 0px 8px 3px rgba(255, 174, 228, 1);
 }
